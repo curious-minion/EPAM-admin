@@ -1,9 +1,54 @@
 .authorization{
 background-color: #E0E8F2B0;
+max-width: 557px;
+height: 757px;
+align-items: center;
+
 }
 .authorization button{
     background-color: #FFB109;
+    max-width: 460px;
+    height: 79px;
+    border: 1.41px solid #000000;
+    font-family: Open Sans,sans-serif;
+    font-size: 28.11px;
+    font-weight: 700;
+    line-height: 38.28px;
+    text-align: center;
+    color: #000000;
 }
-.authorization h1, .authorization h5{
+.authorization h1, .authorization h2{
     color: #044FB1;
+    font-family: Raleway,sans-serif;
+}
+.authorization h2{
+   
+font-size: 22.43px;
+font-weight: 700;
+line-height: 26.33px;
+
+}
+.authorization h1{
+   
+    font-size: 67.47px;
+    font-weight: 800;
+    line-height: 79.21px;
+    margin-top: 40px;
+}
+
+.authorization p, .formLabel{
+    font-family: Open Sans, sans-serif;
+    font-size: 19.68px;
+    font-weight: 400;
+    line-height: 26.8px;
+    text-align: center;
+}
+.authorization p{
+    padding-bottom: 42px;
+}
+.formControl{
+    width: 460px;
+height: 79px;
+
+
 }
