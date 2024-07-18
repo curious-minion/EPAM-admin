@@ -1,8 +1,8 @@
 .authorization{
-background-color: #E0E8F2B0;
-max-width: 557px;
-height: 757px;
-align-items: center;
+    background-color: #E0E8F2B0;
+    max-width: 557px;
+    height: 757px;
+    align-items: center;
 
 }
 .authorization button{
@@ -23,13 +23,12 @@ align-items: center;
 }
 .authorization h2{
    
-font-size: 22.43px;
-font-weight: 700;
-line-height: 26.33px;
+    font-size: 22.43px;
+    font-weight: 700;
+    line-height: 26.33px;
 
 }
 .authorization h1{
-   
     font-size: 67.47px;
     font-weight: 800;
     line-height: 79.21px;
