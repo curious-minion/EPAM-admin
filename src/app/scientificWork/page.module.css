@@ -1,12 +1,12 @@
 .pageContainer h1{
     color: #044FB1;
     font-family: Raleway,sans-serif;
-font-size: 56.22px;
-font-weight: 800;
-line-height: 66.01px;
-text-align: center;
-padding-top: 50px;
-padding-bottom: 55px;
+    font-size: 56.22px;
+    font-weight: 800;
+    line-height: 66.01px;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 55px;
 }
 
 .headerContainer{
@@ -46,6 +46,21 @@ padding-bottom: 55px;
     color: #FFFFFF;
 }
 
+.exitLink{
+font-family: Raleway;
+font-size: 22.43px;
+font-weight: 800;
+line-height: 26.33px;
+text-align: left;
+position: relative;
+top: 350px;
+color: #FFFFFF;
+text-decoration: none;
+}
+.exitLink svg{
+    margin-right: 14px;
+}
+
 .mainContent button{
     width: 375px;
     height: 79px;
@@ -58,4 +73,10 @@ padding-bottom: 55px;
     text-align: center;
     color: #000000;
     margin-top: 60px;
+}
+.add{
+    margin-right: 16px;
+}
+.action{
+    display: flex;
 }
