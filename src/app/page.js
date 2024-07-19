@@ -5,7 +5,7 @@ import React from 'react'
 import { Col, Button, Row, Container, Card, Form } from 'react-bootstrap'
 import laptop from "../../public/svg/laptop.svg"
 import DialogBox from "@/app/components/dialogBox/dialogBox"
-
+import Link from "next/link";
 export default function Login() {
   return (
    
@@ -37,7 +37,9 @@ export default function Login() {
                   
                   <div className="d-grid">
                     <Button variant="secondary" type="submit">
+                      <Link href="/scientificWork" >
                       Увійти
+                      </Link>
                     </Button>
                   </div>
                 </Form>
