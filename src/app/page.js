@@ -4,9 +4,13 @@ import {authorization, formLabel, formControl} from "./page.module.css";
 import React from 'react'
 import { Col, Button, Row, Container, Card, Form } from 'react-bootstrap'
 import laptop from "../../public/svg/laptop.svg"
+import DialogBox from "@/app/components/dialogBox/dialogBox"
+import Link from "next/link";
 export default function Login() {
   return (
+   
     <Container >
+       {/* <DialogBox/> */}
       <Row className="vh-100 d-flex justify-content-center align-items-center">
         <Col md={8} lg={6} xs={12}>
           
@@ -33,7 +37,9 @@ export default function Login() {
                   
                   <div className="d-grid">
                     <Button variant="secondary" type="submit">
+                      <Link href="/scientificWork" >
                       Увійти
+                      </Link>
                     </Button>
                   </div>
                 </Form>
@@ -43,5 +49,6 @@ export default function Login() {
         </Col>
       </Row>
     </Container>
+    
   )
 }

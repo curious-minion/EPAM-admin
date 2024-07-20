@@ -1,0 +1,82 @@
+.pageContainer h1{
+    color: #044FB1;
+    font-family: Raleway,sans-serif;
+    font-size: 56.22px;
+    font-weight: 800;
+    line-height: 66.01px;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 55px;
+}
+
+.headerContainer{
+    background-color:#044FB1;
+    max-width: 400px;
+    height: 1080px;
+    color: #FFFFFF;
+    padding-top: 29px;
+    padding-left: 50px;
+}
+.mainHeader{
+    font-family: Raleway,sans-serif;
+    font-size: 22.43px;
+    font-weight: 800;
+    line-height: 26.33px;
+    text-align: left;
+}
+.pageNavigation{
+    padding-top: 90px;
+}
+.pageNavigationList {
+    display: block;
+    list-style-type: none;
+    padding: 0;
+}
+.pageNavigation li{
+    font-family: Raleway, sans-serif;
+    font-size: 22.43px;
+    font-weight: 800;
+    line-height: 26.33px;
+    text-align: left;
+    padding-bottom: 40px;
+    text-decoration: none;
+}
+.pageNavigation a{
+    text-decoration:none;
+    color: #FFFFFF;
+}
+
+.exitLink{
+font-family: Raleway;
+font-size: 22.43px;
+font-weight: 800;
+line-height: 26.33px;
+text-align: left;
+position: relative;
+top: 350px;
+color: #FFFFFF;
+text-decoration: none;
+}
+.exitLink svg{
+    margin-right: 14px;
+}
+
+.mainContent button{
+    width: 375px;
+    height: 79px;
+    background-color: #FFB109;  
+    border: 1.41px solid #000000;
+    font-family: Open Sans;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32.68px;
+    text-align: center;
+    color: #000000;
+    margin-top: 60px;
+}
+.add{
+    margin-right: 16px;
+}
+.action{
+    display: flex;
+}
