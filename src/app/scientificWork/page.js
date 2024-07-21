@@ -1,29 +1,25 @@
 "use client";
 import{
-    pageContainer,
-    headerContainer,
-	logo,
-	mainHeader,
-	pageNavigation,
-	pageNavigationList,
-  exitLink,
+  pageContainer,
   mainContent,
   add,
   action,
 	createPublicationButton
 } from "./page.module.css"
-import Link from "next/link";
+
 import {useState} from "react";
-import laptop from "../../../public/svg/laptop.svg"
+
 import editBtn from "../../../public/svg/edit-btn.svg"
 import deleteBtn from "../../../public/svg/delete-btn.svg"
 import Image from "next/image";
 import { Container, Row,Col } from "react-bootstrap";
 import Table from 'react-bootstrap/Table';
 
-import Header from "@/app/components/header/header"
+import Header from "@/app/components/header/header";
+import DialogBox from "../components/dialogBox/dialogBox";
 
-export default function ScientificWork () {
+export default function ScientificWork() {
+	const [showModal, setShowModal] = useState(false);
 	return (
         <Container className={pageContainer}>
           <Row>
