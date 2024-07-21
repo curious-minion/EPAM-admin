@@ -1,27 +1,18 @@
 import Col from 'react-bootstrap/Col';
-import { Container } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
-import Link from 'next/link';
-import Header from '../components/header/header';
-import {mainContent,
-    createForm,
-    downloadArticle,
-    downloadButton,
-    rejectButton,
-    createButton,
-} from "@/app/createArticle/page.module.css"
 
-export default function CreateArticle() {
+import {
+	mainContent,
+	createForm,
+	downloadArticle,
+	downloadButton,
+	rejectButton,
+	createButton,
+} from "@/app/createEditArticle/createEditArticle.module.css";
+
+export default function CreateEditArticle() {
     return (
-      <Container>
-        <Row>
-            <Col sm={4}>
-                <Header/>
-            </Col>
-
-            <Col sm={8}>
-
                 <main className={mainContent}>
                     <h1>Створення публікації</h1>
                     <Form className={createForm}>
@@ -41,9 +32,9 @@ export default function CreateArticle() {
                             <Col md>
                                 <Form.Label>Дата</Form.Label>
                                 <Form.Control type="date"/>
-                            </Col>     
+                            </Col>
                         </Row>
-            
+
                         <Form.Label>Вступне слово</Form.Label>
                         <Form.Control as="textarea" rows={10} />
 
@@ -58,11 +49,8 @@ export default function CreateArticle() {
                         <button className={createButton}>Створити та зберегти</button>
                     </div>
                 </main>
-                
-            </Col>
-            
-        </Row>
-    </Container>
+
+
 )}
 
 
@@ -72,4 +60,3 @@ export default function CreateArticle() {
 
 
 
-            

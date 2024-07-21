@@ -7,7 +7,8 @@ import{
 	createPublicationButton
 } from "./page.module.css"
 
-import {useState} from "react";
+import { useState } from "react";
+import Link from "next/link";
 
 import editBtn from "../../../public/svg/edit-btn.svg"
 import deleteBtn from "../../../public/svg/delete-btn.svg"
@@ -57,8 +58,13 @@ export default function ScientificWork() {
           <td>Кібербезпека та криптографія</td>
           <td>27/05/2024</td>
           <td>
-									<div className={action}>
-										<Image src={editBtn}/>
+										<div className={action}>
+											<button>
+												{/* <Link class="link" href={`/scientificArticles/${article.id}`}> */}
+												<Image src={editBtn} />
+												{/* </Link> */}
+											</button>
+
 										<button onClick={() => setShowModal(true)}>  <Image src={deleteBtn} /> </button>
 
             </div>
@@ -142,8 +148,8 @@ export default function ScientificWork() {
       </clipPath>
       </defs>
       </svg>
-
-						Створити публікацію</button>
+							<Link class="link" href="/scientificWork/createArticle">	Створити публікацію</Link>
+						</button>
 
 
             		<DialogBox

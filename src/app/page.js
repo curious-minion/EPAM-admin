@@ -36,7 +36,7 @@ export default function Login() {
 
                   <div className="d-grid">
                     <Button variant="secondary" type="submit">
-                      <Link href="/scientificWork" >
+                      <Link class="link" href="/scientificWork" >
                       Увійти
                       </Link>
                     </Button>
