@@ -1,7 +1,7 @@
 import Raact,  {useCallback, useEffect, useRef} from "react";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-
+import {} from './dialogBox.module.css';
 function DialogBox({show, onHide}) {
 	const modalWrapperRef = useRef();
 
