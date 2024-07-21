@@ -15,15 +15,35 @@
     font-weight: 700;
     line-height: 26.8px;
     text-align: left;
+   
+
+}
+.formControlTitle{
+    height: 79px;
+    border: 2px solid var(--b2, #044FB1);
+    margin-bottom: 20px;
+}
+.formControl{
+    width: 355px;
+    height: 79px;
+    border: 1.41px solid #000000;
+    margin-bottom: 20px;
+  
+}
+
+.textArea{
+height: 413px;
+border: 1.41px solid #000000;
+
 
 }
 .mainContent a{
     font-family: Open Sans;
-font-size: 20px;
-font-weight: 600;
-line-height: 27.24px;
-text-align: left;
-color: #023476;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 27.24px;
+    text-align: left;
+    color: #023476;
 }
 .downloadArticle{
     display: flex;

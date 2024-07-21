@@ -5,6 +5,9 @@ import Row from 'react-bootstrap/Row';
 import {
 	mainContent,
 	createForm,
+    formControl,
+    formControlTitle,
+    textArea,
 	downloadArticle,
 	downloadButton,
 	rejectButton,
@@ -17,26 +20,26 @@ export default function CreateEditArticle() {
                     <h1>Створення публікації</h1>
                     <Form className={createForm}>
                         <Form.Label>Назва публікації</Form.Label>
-                        <Form.Control type="text"/>
+                        <Form.Control className={formControlTitle} type="text"/>
 
-                        <Row className="g-2">
+                        <Row className="g-5 ">
 
                             <Col md>
                                 <Form.Label>Автор</Form.Label>
-                                <Form.Control type="text"/>
+                                <Form.Control className={formControl} type="text"/>
                             </Col>
-                            <Col md>
+                            <Col md >
                                 <Form.Label>Категорія</Form.Label>
-                                <Form.Control type="text"/>
+                                <Form.Control className={formControl} type="text"/>
                             </Col>
-                            <Col md>
+                            <Col md >
                                 <Form.Label>Дата</Form.Label>
-                                <Form.Control type="date"/>
+                                <Form.Control className={formControl} type="date"/>
                             </Col>
                         </Row>
 
                         <Form.Label>Вступне слово</Form.Label>
-                        <Form.Control as="textarea" rows={10} />
+                        <Form.Control className={textArea} as="textarea" rows={10} />
 
 
                     </Form>
