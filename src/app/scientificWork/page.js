@@ -62,7 +62,8 @@ export default function ScientificWork() {
 										<div className={action}>
 											<button>
 												{/* <Link class="link" href={`/scientificArticles/${article.id}`}> */}
-												<Image src={editBtn} />
+												<Link class="link" href="/scientificWork/editArticle/1"><Image src={editBtn} /></Link>
+
 												{/* </Link> */}
 											</button>
 

@@ -1,6 +1,9 @@
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
+import { Container } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
+
+import Header from '../components/header/header';
 
 import {
 	mainContent,
@@ -14,10 +17,18 @@ import {
 	createButton,
 } from "@/app/createEditArticle/createEditArticle.module.css";
 
-export default function CreateEditArticle() {
-    return (
+export default function CreateEditArticle({pageTitle }) {
+	return (
+		<Container>
+        <Row>
+            <Col sm={4}>
+                <Header/>
+  </Col>
+
+				<Col sm={8}>
+
                 <main className={mainContent}>
-                    <h1>Створення публікації</h1>
+                    <h1>{pageTitle}</h1>
                     <Form className={createForm}>
                         <Form.Label>Назва публікації</Form.Label>
                         <Form.Control className={formControlTitle} type="text"/>
@@ -51,7 +62,11 @@ export default function CreateEditArticle() {
                         <button className={rejectButton}>Відхилити</button>
                         <button className={createButton}>Створити та зберегти</button>
                     </div>
-                </main>
+				</main>
+				      </Col>
+
+        </Row>
+    </Container>
 
 
 )}
