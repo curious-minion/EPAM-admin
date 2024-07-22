@@ -5,7 +5,7 @@ import{
 	pageNavigation,
 	pageNavigationList,
     exitLink,
- 
+
 } from "./header.module.css"
 import Link from "next/link";
 import laptop from "../../../../public/svg/laptop.svg"
@@ -17,7 +17,7 @@ export default function Header() {
 
 <header>
             <div className={headerContainer}>
-                <Link href="">
+                <Link href="/">
                     <Image className={ logo} src={laptop}  alt="go to homepage"/>
                 </Link>
             <h2 className={mainHeader}>
@@ -32,12 +32,12 @@ export default function Header() {
                 <li> <Link href="">
                         Новини
                      </Link>
-                </li> 
+                </li>
                 <li> <Link  href="">
                         Адміністрація
                      </Link>
                 </li>
-                <li><Link href="" >
+                <li><Link href="/scientificWork" >
                         Наукова робота
                     </Link>
                 </li>
@@ -48,7 +48,7 @@ export default function Header() {
             </ul>
         </nav>
 
-        <Link className={exitLink} href="./">
+        <Link className={exitLink} href="/">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M15.4286 3H4V18.75C4 19.3467 4.24082 19.919 4.66947 20.341C5.09812 20.7629 5.67951 21 6.28571 21H15.4286M16.5714 15.375L20 12M20 12L16.5714 8.625M20 12H8.57143" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
@@ -57,5 +57,5 @@ export default function Header() {
         </Link>
     </div>
 </header>
-  ) 
+  )
 }
