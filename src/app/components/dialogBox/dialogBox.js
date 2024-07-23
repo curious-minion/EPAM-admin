@@ -11,7 +11,7 @@ import deleteBtn from "../../../../public/svg/delete-btn2.svg";
 import cancelBtn from "../../../../public/svg/cancel.svg";
 import Image from 'next/image';
 
-function DialogBox({show, onHide}) {
+function DialogBox({ show, onHide, bodyText }) {
 
 	return (
 
@@ -26,7 +26,8 @@ function DialogBox({show, onHide}) {
           <Modal.Title id="contained-modal-title-vcenter" className={modalTitle}>Видалити публікацію?</Modal.Title>
 
         <Modal.Body >
-          <p className={modalBody}>Ви дісно хочете видалити публікацію “Етика та відповідальність у розробці штучного інтелекту: аналіз і рекомендації”? Публікація буде видалена назавжди.</p>
+					<p className={modalBody}>Ви дісно хочете видалити публікацію "{`${bodyText}`}"?</p>
+					<p className={modalBody}>	Публікація буде видалена назавжди.</p>
         </Modal.Body>
 
         <Modal.Footer className={modalFooter}>

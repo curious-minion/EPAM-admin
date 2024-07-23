@@ -1,23 +1,24 @@
 import Col from 'react-bootstrap/Col';
 import { Container } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
-import editBtn from "../../../public/svg/edit-btn.svg"
-import deleteBtn from "../../../public/svg/delete-btn2.svg"
+import editBtn from "../../../../public/svg/edit-btn.svg"
+import deleteBtn from "../../../../public/svg/delete-btn2.svg"
 import Image from "next/image";
 import Header from '@/app/components/header/header';
 import LinkBack from '@/app/components/backToArticlesButton/backToArticlesButton';
-import { buttons,
-       editButton,
-       deleteButton,
-       downloadButtonContainer,
+import {
+	buttons,
+	editButton,
+	deleteButton,
+	downloadButtonContainer,
 	downloadButton,
 	completeArticle,
 	aboutArticle,
 	autorArticle,
-    category,
+  category
 
 } from './page.module.css';
- 
+
 export default function Page() {
     return (
       <Container>
@@ -28,7 +29,7 @@ export default function Page() {
 
             <Col sm={8}>
 
-              
+
 <main className={completeArticle}>
 				<h1>Перегляд публікації</h1>
                 <div className={buttons}>
@@ -40,7 +41,7 @@ export default function Page() {
                     <Image src={deleteBtn}/>
                     Видалити</button>
                 </div>
-                <h2>Використання наноматеріалів у створенні 
+                <h2>Використання наноматеріалів у створенні
                 високоефективних комп'ютерних чіпів</h2>
 				<div className={aboutArticle}>
 				<p className={autorArticle}>Автор: <span>Сергій Кібернетик</span></p>
