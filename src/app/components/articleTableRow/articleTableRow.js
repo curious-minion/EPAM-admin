@@ -37,7 +37,7 @@ export default function ArticleTableRow({ articles }) {
 					<td>
 						<div className={action}>
 							<button>
-								<Link href={`/scientificWork/${article.id}`}><Image src={editBtn} alt="edit the article"/></Link>
+								<Link href={`/scientificWork/editArticle/${article.id}`}><Image src={editBtn} alt="edit the article"/></Link>
 
 							</button>
 
