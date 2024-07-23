@@ -1,3 +1,8 @@
+"use client";
+
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import { Container } from 'react-bootstrap';
@@ -17,7 +22,28 @@ import {
 	createButton,
 } from "@/app/createEditArticle/createEditArticle.module.css";
 
-export default function CreateEditArticle({pageTitle }) {
+export default function CreateEditArticle({pageTitle, articles }) {
+	const [articlesData, setArticlesData] = useState([]);
+
+
+	useEffect(() => {
+		setArticlesData(articles)
+	}, []);
+
+
+
+	const pathname = usePathname();
+	const pathId = pathname.slice(28);
+	const article = articlesData? articlesData[pathId - 1]: "";
+	const date = new Date(article?.date);
+	const day = ((date.getDate() > 9) ? date.getDate() : ('0' + date.getDate()));
+
+	const month = (date.getMonth() > 8) ? (date.getMonth() + 1) : ('0' + (date.getMonth() + 1));
+
+	const year = date.getFullYear();
+	const readyDate = year + "-" + month + "-" + day;
+
+
 	return (
 		<Container>
         <Row>
@@ -31,26 +57,26 @@ export default function CreateEditArticle({pageTitle }) {
                     <h1>{pageTitle}</h1>
                     <Form className={createForm}>
                         <Form.Label>Назва публікації</Form.Label>
-                        <Form.Control className={formControlTitle} type="text"/>
+							<Form.Control className={formControlTitle} type="text" value={ article?.title} />
 
                         <Row className="g-5 ">
 
                             <Col md>
                                 <Form.Label>Автор</Form.Label>
-                                <Form.Control className={formControl} type="text"/>
+                                <Form.Control className={formControl} type="text" value={ article?.author}/>
                             </Col>
                             <Col md >
                                 <Form.Label>Категорія</Form.Label>
-                                <Form.Control className={formControl} type="text"/>
+                                <Form.Control className={formControl} type="text" value={ article?.category}/>
                             </Col>
                             <Col md >
                                 <Form.Label>Дата</Form.Label>
-                                <Form.Control className={formControl} type="date"/>
+									<Form.Control className={formControl} type="date" value={readyDate} />
                             </Col>
                         </Row>
 
                         <Form.Label>Вступне слово</Form.Label>
-                        <Form.Control className={textArea} as="textarea" rows={10} />
+                        <Form.Control className={textArea} as="textarea" rows={10} value={ article?.text}/>
 
 
                     </Form>

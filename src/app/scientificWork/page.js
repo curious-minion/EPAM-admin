@@ -2,7 +2,6 @@ import{
   pageContainer,
   mainContent,
   add,
-  action,
 	createPublicationButton
 } from "./page.module.css"
 
