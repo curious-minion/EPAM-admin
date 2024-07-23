@@ -7,6 +7,7 @@ import deleteBtn from "../../../../public/svg/delete-btn2.svg";
 import editBtn from "../../../../public/svg/edit-btn.svg";
 import download from "../../../../public/svg/download.svg";
 import LinkBack from "../backToArticlesButton/backToArticlesButton";
+import Link from "next/link";
 
 import {
 	buttons,
@@ -39,9 +40,13 @@ export default function ViewArticle({articles}) {
 				<h1>Перегляд публікації</h1>
                 <div className={buttons}>
                 <LinkBack/>
-                <button className={editButton}>
-                    <Image src={editBtn}/>
-                    Редагувати</button>
+
+				<button className={editButton}>
+					<Link href={`/scientificWork/editArticle/${article?.id}`} class="link">
+						<Image src={editBtn} alt="edit the article" />
+						Редагувати
+					</Link></button>
+
                 <button className={deleteButton}>
                     <Image src={deleteBtn}/>
                     Видалити</button>

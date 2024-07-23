@@ -4,7 +4,7 @@ export default function Page() {
 	const pageTitle = "Створення публікації";
 	return (
 
-                <CreateEditArticle/>
+                <CreateEditArticle pageTitle={pageTitle}/>
 )}
 
 
