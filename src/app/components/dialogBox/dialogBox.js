@@ -1,7 +1,16 @@
-import Raact,  {useCallback, useEffect, useRef} from "react";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import {} from './dialogBox.module.css';
+import {
+	modalTitle,
+	modalBody,
+	deleteButton,
+	editButton,
+	modalFooter
+ } from './dialogBox.module.css';
+import deleteBtn from "../../../../public/svg/delete-btn2.svg";
+import cancelBtn from "../../../../public/svg/cancel.svg";
+import Image from 'next/image';
+
 function DialogBox({show, onHide}) {
 
 	return (
@@ -14,15 +23,15 @@ function DialogBox({show, onHide}) {
 			centered>
 			 <Modal.Dialog >
 
-          <Modal.Title id="contained-modal-title-vcenter">Видалити публікацію?</Modal.Title>
+          <Modal.Title id="contained-modal-title-vcenter" className={modalTitle}>Видалити публікацію?</Modal.Title>
 
-        <Modal.Body>
-          <p>Ви дісно хочете видалити публікацію “Етика та відповідальність у розробці штучного інтелекту: аналіз і рекомендації”? Публікація буде видалена назавжди.</p>
+        <Modal.Body >
+          <p className={modalBody}>Ви дісно хочете видалити публікацію “Етика та відповідальність у розробці штучного інтелекту: аналіз і рекомендації”? Публікація буде видалена назавжди.</p>
         </Modal.Body>
 
-        <Modal.Footer>
-          <Button variant="secondary" onClick={onHide}>Відхилити</Button>
-          <Button variant="danger">Видалити</Button>
+        <Modal.Footer className={modalFooter}>
+          <Button  onClick={onHide} className={editButton} ><Image src={cancelBtn}/>Відхилити</Button>
+          <Button  className={deleteButton}> <Image src={deleteBtn}/>Видалити</Button>
         </Modal.Footer>
 			</Modal.Dialog>
 

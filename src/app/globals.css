@@ -122,3 +122,12 @@ color: #FFB109;
     color-scheme: dark;
   }
 }
+.modal-dialog div {
+  border-radius: 0%;
+}
+
+.modal-content div {
+  border: none;
+border-radius: 0%;
+}
+

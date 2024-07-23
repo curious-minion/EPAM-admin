@@ -1,0 +1,55 @@
+.modalTitle {
+	color: #044FB1;
+	font-weight: 800;
+	font-family: Raleway;
+	font-size: 56px;
+	line-height: 65px;
+	text-align: center;
+}
+
+.modalBody {
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 26px;
+	font-family: Open Sans, sans-serif;
+
+}
+
+.modalFooter {
+	justify-content: space-between;
+}
+
+.editButton,
+.deleteButton {
+	border-radius: 0%;
+	font-family: Open Sans, sans-serif;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 32.68px;
+	text-align: center;
+	padding: 26px;
+	align-items: center;
+	display: flex;
+
+}
+
+.editButton {
+	color: black;
+	background-color: #007AFF26;
+	border: 1px solid #007AFF;
+	margin-left: 205px;
+	margin-right: 45px;
+	margin: 0;
+}
+
+.deleteButton {
+	background-color: #E10609;
+	border: 1px solid;
+	color: #FFFFFF;
+
+}
+
+.deleteButton img,
+.editButton img {
+	margin-right: 11px;
+}
