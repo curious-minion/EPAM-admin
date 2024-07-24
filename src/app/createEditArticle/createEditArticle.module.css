@@ -15,7 +15,7 @@
     font-weight: 700;
     line-height: 26.8px;
     text-align: left;
-   
+
 
 }
 .formControlTitle{
@@ -28,7 +28,7 @@
     height: 79px;
     border: 1.41px solid #000000;
     margin-bottom: 20px;
-  
+
 }
 
 .textArea{
@@ -48,7 +48,7 @@ border: 1.41px solid #000000;
 .downloadArticle{
     display: flex;
     padding-top: 40px;
-    width: 1380px;
+    width: 1185px;
 }
 .downloadButton{
     width: 273px;
@@ -76,6 +76,16 @@ border: 1.41px solid #000000;
     text-align: center;
     margin-right: 33px;
 }
+
+.editButton {
+    margin-right: 20px;
+}
+
+.saveButton {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
 .createButton{
     width: 296px;
     height: 79px;

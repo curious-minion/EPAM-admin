@@ -1,26 +1,32 @@
-"use client";
 import{
   pageContainer,
   mainContent,
   add,
-  action,
 	createPublicationButton
 } from "./page.module.css"
 
-import { useState } from "react";
 import Link from "next/link";
-
-import editBtn from "../../../public/svg/edit-btn.svg"
-import deleteBtn from "../../../public/svg/delete-btn.svg"
-import Image from "next/image";
 import { Container, Row,Col } from "react-bootstrap";
 import Table from 'react-bootstrap/Table';
 
 import Header from "@/app/components/header/header";
-import DialogBox from "../components/dialogBox/dialogBox";
+import ArticleTableRow from "../components/articleTableRow/articleTableRow";
+
+import { promises as fs } from 'fs';
+
+async function getArticles() {
+ const path = process.cwd() + "/src/app/articles.json"
+  const file = await fs.readFile(path, "utf8");
+  const data = JSON.parse(file);
+  return data;
+}
+
+
+
+const articles = await getArticles();
 
 export default function ScientificWork() {
-	const [showModal, setShowModal] = useState(false);
+
 	return (
         <Container className={pageContainer}>
           <Row>
@@ -32,16 +38,6 @@ export default function ScientificWork() {
             <main className={mainContent}>
             <h1>Наукова  робота </h1>
     <Table striped>
-      {/* <thead className={tableHeader}>
-        <tr>
-          <th>№</th>
-          <th>Назва публікації</th>
-          <th>Автор</th>
-          <th>Категорія</th>
-          <th>Дата</th>
-          <th>Дія</th>
-        </tr>
-      </thead> */}
       <tbody>
     <tr>
           <th>№</th>
@@ -50,93 +46,9 @@ export default function ScientificWork() {
           <th>Категорія</th>
           <th>Дата</th>
           <th>Дія</th>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>
-            <Link href="/viewArticle">Безпека та надійність систем штучного інтелекту: методи оцінки та вдосконалення </Link></td>
-          <td>Марина Нейронова</td>
-          <td>Кібербезпека та криптографія</td>
-          <td>27/05/2024</td>
-          <td>
-										<div className={action}>
-											<button>
-												{/* <Link class="link" href={`/scientificArticles/${article.id}`}> */}
-												<Link class="link" href="/scientificWork/editArticle/1"><Image src={editBtn} /></Link>
+		</tr>
 
-												{/* </Link> */}
-											</button>
-
-										<button onClick={() => setShowModal(true)}>  <Image src={deleteBtn} /> </button>
-
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Розробка ефективних алгоритмів глибинного навчання для обробки природної мови</td>
-          <td>Ольга Алгоритмова</td>
-          <td>Штучний інтелект та машинне навчання</td>
-          <td>05/04/2024</td>
-          <td>
-          <div className={action}>
-            <Image src={editBtn}/>
-            <Image src={deleteBtn}/>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Використання наноматеріалів у створенні високоефективних комп'ютерних чіпів</td>
-          <td>Сергій Кібернетик</td>
-          <td>Нанотехнології та квантові обчислення</td>
-          <td>18/03/2024</td>
-          <td>
-          <div className={action}>
-            <Image src={editBtn}/>
-            <Image src={deleteBtn}/>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>Генеративні змагальні мережі (GANs): нові підходи до синтезу реалістичних зображень</td>
-          <td>Олександр Кодер</td>
-          <td>Штучний інтелект та машинне навчання</td>
-          <td>24/03/2024</td>
-          <td>
-          <div className={action}>
-            <Image src={editBtn}/>
-            <Image src={deleteBtn}/>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>Етика та відповідальність у розробці штучного інтелекту: аналіз і рекомендації</td>
-          <td>Наталія Бітова</td>
-          <td>Етика та соціальні аспекти технологій</td>
-          <td>13/02/2024</td>
-          <td>
-          <div className={action}>
-            <Image src={editBtn}/>
-            <Image src={deleteBtn}/>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>6</td>
-          <td>Психологічні аспекти взаємодії з VR/AR технологіями: нові знахідки</td>
-          <td>Дар’я Технологічна</td>
-          <td>Віртуальна та доповнена реальність (VR/AR)</td>
-          <td>28/01/2024</td>
-          <td>
-          <div className={action}>
-            <Image src={editBtn}/>
-            <Image src={deleteBtn}/>
-            </div>
-          </td>
-        </tr>
+								<ArticleTableRow articles={articles}/>
       </tbody>
     </Table>
  <button className={createPublicationButton}>
@@ -152,12 +64,6 @@ export default function ScientificWork() {
       </svg>
 							<Link class="link" href="/scientificWork/createArticle">	Створити публікацію</Link>
 						</button>
-
-
-            		<DialogBox
-      			show={showModal}
-       	 onHide={() => setShowModal(false)}/>
-
 
     </main>
     </Col>
