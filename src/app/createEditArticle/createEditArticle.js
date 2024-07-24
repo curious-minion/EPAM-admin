@@ -20,7 +20,14 @@ import {
 	downloadButton,
 	rejectButton,
 	createButton,
+	editButton,
+	saveButton
 } from "@/app/createEditArticle/createEditArticle.module.css";
+import Link from "next/link";
+
+import Image from "next/image";
+import cancelBtnWhite from "../../../public/svg/cancel-white.svg";
+import saveBtn from "../../../public/svg/save.svg";
 
 export default function CreateEditArticle({pageTitle, articles }) {
 	const [articlesData, setArticlesData] = useState([]);
@@ -85,8 +92,8 @@ export default function CreateEditArticle({pageTitle, articles }) {
                         <a href="">Завантажте файл з текстом публікації.<br></br> Необхідний формат файлу: PDF</a>
                         </div>
                         <button className={downloadButton}>Завантажити файл</button>
-                        <button className={rejectButton}>Відхилити</button>
-                        <button className={createButton}>Створити та зберегти</button>
+							<Link class="link" href="/scientificWork"><button className={rejectButton}><Image src={cancelBtnWhite} alt="cancel editing" className={ editButton} />Відхилити</button></Link>
+                        <button className={createButton}><Image src={saveBtn} alt="save article changes" className={ saveButton} />Створити та зберегти</button>
                     </div>
 				</main>
 				      </Col>

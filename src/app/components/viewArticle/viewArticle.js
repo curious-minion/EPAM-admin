@@ -24,6 +24,7 @@ import {
 	articleSpan
 
 } from './viewArticle.module.css';
+import DialogBox from "../dialogBox/dialogBox";
 
 export default function ViewArticle({articles}) {
 
@@ -31,6 +32,15 @@ export default function ViewArticle({articles}) {
 	useEffect(() => {
 		setArticlesData(articles)
 	}, []);
+
+
+	const [showModal, setShowModal] = useState(false);
+	const [modalText, setModalText] = useState([]);
+
+	const onClick = (title) => {
+		setShowModal(true);
+		setModalText(title);
+	}
 
 	const pathname = usePathname();
 	const pathId = pathname.slice(13);
@@ -47,7 +57,7 @@ export default function ViewArticle({articles}) {
 						Редагувати
 					</Link></button>
 
-                <button className={deleteButton}>
+                <button className={deleteButton} onClick={() => onClick(article?.title)}>
                     <Image src={deleteBtn}/>
                     Видалити</button>
                 </div>
@@ -66,6 +76,13 @@ export default function ViewArticle({articles}) {
 					Завантажити весь текст
 					</button>
 				</div>
+
+				<DialogBox
+				bodyText={modalText}
+      	show={showModal}
+				onHide={() => setShowModal(false)} />
+
+
 			</main>
 	)
 }
