@@ -1,4 +1,5 @@
 "use client"
+import { useRouter } from 'next/navigation'
 import Image from "next/image";
 import {authorization, formLabel, formControl} from "./page.module.css";
 import React from 'react'
@@ -6,6 +7,7 @@ import { Col, Button, Row, Container, Card, Form } from 'react-bootstrap'
 import laptop from "../../public/svg/laptop.svg"
 import Link from "next/link";
 export default function Login() {
+  const router = useRouter()
   return (
 
     <Container >
@@ -35,10 +37,10 @@ export default function Login() {
                   </Form.Group>
 
                   <div className="d-grid">
-                    <Button variant="secondary" type="submit">
-                      <Link class="link" href="/scientificWork" >
+                    <Button onClick={() => router.push("/scientificWork")} variant="secondary">
+                      
                       Увійти
-                      </Link>
+                      
                     </Button>
                   </div>
                 </Form>

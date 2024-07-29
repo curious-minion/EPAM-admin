@@ -63,27 +63,27 @@ export default function CreateEditArticle({pageTitle, articles }) {
                 <main className={mainContent}>
                     <h1>{pageTitle}</h1>
                     <Form className={createForm}>
-                        <Form.Label>Назва публікації</Form.Label>
-							<Form.Control className={formControlTitle} type="text" value={ article?.title} />
+                        <Form.Label htmlFor="titlePublication">Назва публікації</Form.Label>
+							<Form.Control id="titlePublication" className={formControlTitle} type="text" value={ article?.title} />
 
                         <Row className="g-5 ">
 
                             <Col md>
-                                <Form.Label>Автор</Form.Label>
-                                <Form.Control className={formControl} type="text" value={ article?.author}/>
+                                <Form.Label htmlFor="arthor">Автор</Form.Label>
+                                <Form.Control id="arthor" className={formControl} type="text" value={ article?.author}/>
                             </Col>
                             <Col md >
-                                <Form.Label>Категорія</Form.Label>
-                                <Form.Control className={formControl} type="text" value={ article?.category}/>
+                                <Form.Label htmlFor="categoryPublication">Категорія</Form.Label>
+                                <Form.Control id="categoryPublication" className={formControl} type="text" value={ article?.category}/>
                             </Col>
                             <Col md >
-                                <Form.Label>Дата</Form.Label>
-									<Form.Control className={formControl} type="date" value={readyDate} />
+                                <Form.Label htmlFor="datePublication">Дата</Form.Label>
+									<Form.Control id="datePublication"className={formControl} type="date" value={readyDate} />
                             </Col>
                         </Row>
 
-                        <Form.Label>Вступне слово</Form.Label>
-                        <Form.Control className={textArea} as="textarea" rows={10} value={ article?.text}/>
+                        <Form.Label htmlFor="textPublication">Вступне слово</Form.Label>
+                        <Form.Control id="textPublication" className={textArea} as="textarea" rows={10} value={ article?.text}/>
 
 
                     </Form>
